@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Home from './components/Home';
+import About from './components/About';
+import ProfileCard from './components/ProfileCard';
+import Skill from './components/Skill';
+import Works from './components/Works';
+import Contact from './components/Contact';
+//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import styles from './App.css';
+import { library } from '@fortawesome/fontawesome-svg-core'; //fontawesomeのコアファイル
+import { fab } from '@fortawesome/free-brands-svg-icons'; //fontawesomeのbrandアイコンのインポート
+import { fas } from '@fortawesome/free-solid-svg-icons'; //fontawesomeのsolidアイコンのインポート
+import { far } from '@fortawesome/free-regular-svg-icons'; //fontawesomeのregularアイコンのインポート
+library.add(fab, fas, far); //他のコンポーネントから簡単に呼び出せるようにするための登録処理？
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <div className="App">
+        <Router>
+          <div>
+            <Header />
+            <Route exact path='/' component={Home}/>
+            <Route path= '/About' render={ () => <About name={'Tomoyuki Kumagai'}/> }/>
+            <Route path= '/Works' component={Works}/>
+            <Route path= '/Contact' component={Contact}/>
+          </div>
+        </Router>
+      </div>
+    );
+  }
 }
 
 export default App;

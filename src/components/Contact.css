@@ -1,0 +1,177 @@
+@media (min-width: 960px) {
+  @keyframes fadein {
+    from {
+        opacity: 0;
+        transform: translateY(200px);
+    }
+    to {
+        opacity: 2;
+        transform: translateY(0);
+       }
+    }
+
+  a {
+    text-decoration: none;
+  }
+
+  .contact-card{
+    position: absolute;
+    margin: 200;
+    left: 0;
+    right: 0;
+    display: inline-block;
+    margin: auto;
+    margin-top: 50px;
+
+    width: 600px;
+    height: 300px;
+
+    background-color: white;
+    border: solid 1px rgb(197, 197, 197);
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.2));
+
+    animation-name: fadein;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  .contact-card-content {
+    text-align: center;
+  }
+
+  .contact-card-center {
+    text-align: center;
+  }
+
+  .contact-card-title {
+    font-size: 28px;
+    padding-top: 10px;
+    text-align: center;
+    height: 55px;
+  }
+
+  .contact-card-right-email {
+    margin-left: 155px;
+    width: 100px;
+    margin-top: 70px;
+  }
+
+  .contact-card-logos{
+    text-align: center;
+  }
+
+  .contact-card-logos a{
+    transition: all 0.2s;
+    color: #919191;
+  }
+
+  .git:hover{
+    color: black;
+  }
+
+  .facebook:hover{
+    color: #3b5998;
+  }
+
+  .twitter:hover{
+    color: #38A1F3;
+  }
+
+  .logos{
+    margin: 30px 20px;
+    display: inline-block;
+    text-align: center;
+  }
+}
+
+@media (max-width: 960px) {
+  @keyframes bouncein {
+    from {
+      margin-left:100%;
+      width:90%
+    }
+
+    to {
+      margin-left:5%;
+      width:90%;
+    }
+  }
+
+  .contact-card{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: 30px;
+
+    width: 90%;
+    height: 300px;
+
+    background-color: white;
+    border: solid 1px rgb(197, 197, 197);
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.2));
+
+    animation-name: bouncein;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  .contact-card-center {
+    text-align: center;
+  }
+
+  .contact-card-title {
+    font-size: 28px;
+    padding-top: 10px;
+    text-align: center;
+    height: 55px;
+  }
+
+  .contact-card-right-email {
+    text-align: center;
+    margin-top: 70px;
+  }
+
+  .contact-card-logos{
+    text-align: center;
+  }
+
+  .contact-card-logos a{
+    transition: all 0.2s;
+    color: #707070;
+  }
+
+  a.git {
+    text-decoration: none;
+  }
+
+  .git:hover{
+    color: black;
+  }
+
+  a.facebook {
+    text-decoration: none;
+  }
+
+  .facebook:hover{
+    color: #3b5998;
+  }
+
+  a.facebook {
+    text-decoration: none;
+  }
+
+  a.twitter {
+    text-decoration: none;
+  }
+
+  .twitter:hover{
+    color: #38A1F3;
+  }
+
+  .logos{
+    margin: 30px 20px;
+    display: inline-block;
+    text-align: center;
+  }
+}

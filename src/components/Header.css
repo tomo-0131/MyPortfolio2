@@ -1,0 +1,41 @@
+.header__title {
+  text-align: center;
+}
+
+.header__link__list {
+  margin-top: 40px;
+  list-style: none;
+  text-align: center;
+}
+
+.header__list {
+  font-size: 18px;;
+  margin-right: 10px;
+  margin-top: 22px;
+}
+
+.header__list li {
+  text-align: center;
+  display: inline-block;
+  margin-left: 22px;
+}
+
+.header__link {
+  text-decoration: none;
+  color: rgb(119, 119, 119);
+  margin-top: -90px;;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  margin: 10px 0 0 0;
+}
+
+.header__link:hover {
+border-bottom: 2px solid;
+font-weight: 800;
+-webkit-transform: translateY(-5px);
+-ms-transform: translateY(-5px);
+transform: translateY(-5px);
+}
