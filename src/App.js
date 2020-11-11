@@ -4,11 +4,14 @@ import Header from './components/Header';
 import Home from './components/Home';
 import About from './components/About';
 import ProfileCard from './components/ProfileCard';
-import Skill from './components/Skill';
+import SkillCard from './components/SkillCard';
 import Works from './components/Works';
 import Contact from './components/Contact';
-//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './App.css';
+import './materialize.css';
+import './materialize.js';
+import './materialize.min.js';
+import './materialize.min.js';
 import { library } from '@fortawesome/fontawesome-svg-core'; //fontawesomeのコアファイル
 import { fab } from '@fortawesome/free-brands-svg-icons'; //fontawesomeのbrandアイコンのインポート
 import { fas } from '@fortawesome/free-solid-svg-icons'; //fontawesomeのsolidアイコンのインポート
