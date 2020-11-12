@@ -7,7 +7,7 @@ class ProfileCard extends React.Component {
     return (
       <div className="profile-card">
         <div className="profile-card-title">
-          <h3>A b o u t　M e !</h3>
+          <h4>A b o u t　M e !</h4>
         <div className="profile-card-content">
           <div className="profile-card-left">
             <div className="profile-card-img"></div>
@@ -21,15 +21,15 @@ class ProfileCard extends React.Component {
               </div>
           </div>
           <div className="profile-card-right">
-            <h3 className="profile-card-right-name">
+            <h4 className="profile-card-right-name">
               Tomoyuki Kumagai
               <div className="info">
                 <p>1989 04/24</p>
                 <p>趣味：プログラミング, イラスト</p>
               </div>
-            </h3>
+            </h4>
             <p className="profile-card-right-content">
-              前職は市役所で総務・課内のIT推進業務等を担当。日々WEBに触れる中で、WEBサービスを通じて新たな価値観、喜びや楽しみなどを顧客に提供することができるWEBエンジニアの魅力に惹かれ転職活動。
+              前職は市役所で総務・課内のIT推進業務等を担当。日々WEBに触れる中で、WEBサービスを通じて新たな価値観、喜びや楽しみなどを顧客に提供することができるWEBエンジニアの魅力に惹かれ、プログラミングを独習し転職活動開始。
             </p>
           </div>
         </div>
