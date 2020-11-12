@@ -51,9 +51,10 @@
   }
 
   .contact-card-right-email {
-    margin-left: 155px;
-    width: 100px;
+
     margin-top: 70px;
+    text-align: center;
+    font-size: 30px;
   }
 
   .contact-card-logos{
@@ -102,7 +103,7 @@
     left: 0;
     right: 0;
     margin: auto;
-    margin-top: 30px;
+    margin-top: 40px;
 
     width: 90%;
     height: 300px;
@@ -130,6 +131,7 @@
   .contact-card-right-email {
     text-align: center;
     margin-top: 70px;
+    font-size: 30px;
   }
 
   .contact-card-logos{

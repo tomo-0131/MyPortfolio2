@@ -8,15 +8,15 @@ class Contact extends React.Component {
       <div class="animate__animated animate__wobble">
         <div className="contact-card">
           <div className="contact-card-title">
-            <h3>C O N T A C T</h3>
+            <h4>C O N T A C T</h4>
           </div>
 
           <div className="contact-card-content">
             <div className="contact-card-center">
               <div className="contact-card-right">
-                <h2 className="contact-card-right-email">
+                <h3 className="contact-card-right-email">
                   tk.engineer@google.com
-                </h2>
+                </h3>
               </div>
               <div className="contact-card-logos">
                 <a href="https://github.com/tomo-0131" className="git">
