@@ -1,99 +1,46 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import SwipeableViews from 'react-swipeable-views';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
-import '../components/ProfileCard';
-import ProfileCard from '../components/ProfileCard';
+import './Works.css';
+import Portfolio from '../images/Portfolio.png';
+import SkillCard from './SkillCard';
 
-function TabPanel(props) {
-  const { children, value, index, ...other } = props;
-
-  return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`full-width-tabpanel-${index}`}
-      aria-labelledby={`full-width-tab-${index}`}
-      {...other}
-    >
-      {value === index && (
-        <Box p={3}>
-          <Typography>{children}</Typography>
-        </Box>
-      )}
-    </div>
-  );
+class Works extends React.Component {
+  render() {
+    return (
+      <div className="card">
+        <div className="card-image waves-effect waves-block waves-light">
+          <img className="activator" src={ Portfolio }></img>
+        </div>
+        <div className="card-content">
+          <span className="card-title activator grey-text text-darken-4">個人開発アプリケーション<i className="material-icons right">more_vert</i></span>
+          <p><a href="https://cat-pia.com">LINK</a></p>
+        </div>
+        <div className="card-reveal">
+          <span className="card-title grey-text text-darken-4">CATPIA<i className="material-icons right">close</i></span>
+          <p>お気に入りの猫カフェを共有できるWEBアプリケーションです。通知機能、DM機能、いいね機能(Ajax),フォロー機能(Ajax)、マップ機能等々、SNS要素を盛り込んだ内容です。
+          </p>
+          <p>
+          [ 使用技術 ]<br></br>
+          * HTML<br></br>
+          * CSS<br></br>
+          * Javascript / JQuery / Ajax<br></br>
+          * Ruby 2.5.3 / Slim記法<br></br>
+          * Ruby on Rails 5.2.4 (RSpec / Rubocopによる動的静的テスト等も含む)<br></br>
+          * MySQL<br></br>
+          * Linux (各種コマンド操作)<br></br>
+          * Nginx (Web Server)<br></br>
+          * Puma (Application Server)<br></br>
+          * Git / GitHub (pull request, Issues 等による擬似チーム開発)<br></br>
+          * Docker / docker-compose<br></br>
+          * AWS各種サービス<br></br>
+          * CircleCI/CD<br></br>
+          * Capistrano<br></br>
+          * AWS<br></br>
+          * EC2 ( Amazon Linux 2 ) / RDS(MySQL) / S3 / VPC / IAM / Route53 / ACM / ALB<br></br>
+          </p>
+        </div>
+      </div>
+    )
+  }
 }
 
-TabPanel.propTypes = {
-  children: PropTypes.node,
-  index: PropTypes.any.isRequired,
-  value: PropTypes.any.isRequired,
-};
-
-function a11yProps(index) {
-  return {
-    id: `full-width-tab-${index}`,
-    'aria-controls': `full-width-tabpanel-${index}`,
-  };
-}
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    backgroundColor: theme.palette.background.paper,
-    width: 800,
-  },
-}));
-
-export default function FullWidthTabs() {
-  const classes = useStyles();
-  const theme = useTheme();
-  const [value, setValue] = React.useState(0);
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
-
-  const handleChangeIndex = (index) => {
-    setValue(index);
-  };
-
-  return (
-    <div className={classes.root}>
-      <AppBar position="static" color="black">
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          indicatorColor="primary"
-          textColor="primary"
-          variant="fullWidth"
-          aria-label="full width tabs example"
-        >
-          <Tab label="WORKS" {...a11yProps(0)} />
-          <Tab label="ABOUT" {...a11yProps(1)} />
-          <Tab label="CONTACT" {...a11yProps(2)} />
-        </Tabs>
-      </AppBar>
-      <SwipeableViews
-        axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-        index={value}
-        onChangeIndex={handleChangeIndex}
-      >
-        <TabPanel value={value} index={0} dir={theme.direction}>
-          Item One
-        </TabPanel>
-        <TabPanel value={value} index={1} dir={theme.direction}>
-          <ProfileCard />
-        </TabPanel>
-        <TabPanel value={value} index={2} dir={theme.direction}>
-          Item Three
-        </TabPanel>
-      </SwipeableViews>
-    </div>
-  );
-}
+export default Works;
