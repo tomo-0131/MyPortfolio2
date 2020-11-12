@@ -6,7 +6,7 @@ import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
-import SkillCard from './Skill';
+import SkillCard from './SkillCard';
 
 class About extends React.Component {
   render() {
@@ -50,7 +50,7 @@ class About extends React.Component {
     return (
       <div  className="wrapper">
         <div className="about__main">
-          <h2 className="about__title2">ABOUT</h2>
+          <h4 className="about__title2">ABOUT</h4>
           <div className="about__container">
             <div className="about__container__description">
               <div className="about__name__info">
